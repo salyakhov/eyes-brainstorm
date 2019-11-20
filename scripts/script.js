@@ -26,6 +26,7 @@ const Scene = require('Scene');
 
 const Patches = require('Patches');
 const numberFormat = '{0}';
+const timerFormat = '{0} sec';
 
 const rightCounter = Patches.getScalarValue('rightCounter');
 Patches.setStringValue('rightCounterTxt', rightCounter.format(numberFormat));
@@ -34,4 +35,7 @@ const leftCounter = Patches.getScalarValue('leftCounter');
 Patches.setStringValue('leftCounterTxt', leftCounter.format(numberFormat));
 
 const timer = Patches.getScalarValue('runTimer');
-Patches.setStringValue('runTimerTxt', timer.format(numberFormat));
+Patches.setStringValue('runTimerTxt', timer.format(timerFormat));
+
+const totalCounter = Patches.getScalarValue('totalCounter');
+Patches.setStringValue('totalCounterTxt', totalCounter.format(numberFormat));
